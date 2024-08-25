@@ -5,8 +5,24 @@
 <div class="text-center">
     <h1 class="display-4">Welcome</h1>
     <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
-<h2 style=" color: purple">Hello World!, I am Nguyen Thai Hoc</h2>
 
+<h2 style=" color: purple">Hello World!, I am Nguyen Thai Hoc</h2>
+<hr />
+<ul>
+    @for (int i=0; i<=5; i++)
+        {
+            <li>Item</li>
+        }
+    </ul>
+    <hr />
+    @if (DataTime.Now.Hour < 12)
+    {
+        <p>Good Morning!</p>
+    }
+    else
+    {
+        <p>Good Afternoon!</p>
+    }
 
 </div>
 

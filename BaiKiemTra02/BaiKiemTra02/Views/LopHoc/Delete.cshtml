@@ -1,0 +1,16 @@
+﻿@model BaiKiemTra02.Models.LopHoc
+
+@{
+    ViewData["Title"] = "Xóa lớp học";
+}
+
+<h1>@ViewData["Title"]</h1>
+
+<h4>Bạn có chắc chắn muốn xóa lớp học này?</h4>
+<hr />
+<div>
+    <h4>@Model.TenLopHoc</h4>
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.NamNhapHoc)
+        </dt

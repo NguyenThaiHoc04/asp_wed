@@ -1,0 +1,55 @@
+﻿@model IEnumerable<BaiKiemTra02.Models.LopHoc>
+
+@{
+    ViewData["Title"] = "Danh sách các lớp học";
+}
+
+<h1>@ViewData["Title"]</h1>
+
+<p>
+    <a href="@Url.Action("Create")" class="btn btn-primary">Thêm lớp học mới</a>
+</p>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.TenLopHoc)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.NamNhapHoc)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.NamRaTruong)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.SoLuongSinhVien)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.TenLopHoc)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.NamNhapHoc)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.NamRaTruong)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.SoLuongSinhVien)
+                </td>
+                <td>
+                    <a href="@Url.Action("Edit", new { id = item.Id })" class="btn btn-sm btn-warning">Chỉnh sửa</a> |
+                    <a href="@Url.Action("Details", new { id = item.Id })" class="btn btn-sm btn-info">Chi tiết</a> |
+                    <a href="@Url.Action("Delete", new { id = item.Id })" class="btn btn-sm btn-danger">Xóa</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
